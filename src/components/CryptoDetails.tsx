@@ -22,7 +22,7 @@ const CryptoDetails = () => {
 
     if (isFetching) return <Loader />;
 
-    const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
+    const time = ['24h', '7d', '30d', '1y'];
 
     const stats = [
         { title: 'Price to USD', value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`, icon: <DollarCircleOutlined /> },
@@ -116,7 +116,7 @@ const CryptoDetails = () => {
                             <Title level={5} className="link-name">
                                 {link.type}
                             </Title>
-                            <a href={link.url} target="_blank" rel="noreferre">
+                            <a href={link.url} target="_blank" rel="noreferrer">
                                 {link.name}
                             </a>
                         </Row>
